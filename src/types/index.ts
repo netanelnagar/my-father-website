@@ -4,6 +4,7 @@ export interface Review {
   rating: number;
   content: string;
   image_filename?: string;
+  status: 'pending' | 'approved' | 'rejected';
   created_at: string;
 }
 
@@ -12,6 +13,19 @@ export type ReviewForm = {
   rating: number;
   content: string;
   image: FileList | null;
+};
+
+export interface GallerySubmission {
+  id: string;
+  caption: string;
+  filename: string;
+  status: 'pending' | 'approved' | 'rejected';
+  created_at: string;
+}
+
+export type GallerySubmissionForm = {
+  caption: string;
+  image: FileList;
 };
 
 export interface ApiResponse<T = any> {
@@ -38,8 +52,7 @@ export interface AdminAuth {
   isAdmin: boolean;
 }
 
-
-export type AdminTabKey = 'reviews' | 'gallery' | 'customer-reviews' | 'upload-review';
+export type AdminTabKey = 'reviews' | 'gallery' | 'customer-reviews' | 'upload-review' | 'pending-gallery';
 
 export interface GalleryImage {
   name: 'primary' | 'side' | 'cabin';

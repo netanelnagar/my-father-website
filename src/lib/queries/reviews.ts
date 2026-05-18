@@ -13,7 +13,7 @@ export async function fetchReviews(): Promise<FetchReviewsResult> {
     try {
       const { pool } = await import('@/lib/db');
       const result = await pool.query(
-        'SELECT * FROM reviews ORDER BY created_at DESC'
+        "SELECT * FROM reviews WHERE status = 'approved' ORDER BY created_at DESC"
       );
 
       return {

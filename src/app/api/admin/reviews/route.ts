@@ -5,6 +5,21 @@ import { pool } from '@/lib/db';
 import { revalidateTag } from 'next/cache';
 
 
+export async function GET(request: NextRequest) {
+  const admin = verifyAdminToken(request);
+  if (!admin) {
+    return NextResponse.json({ success: false, error: 'לא מחובר כאדמין' }, { status: 401 });
+  }
+
+  try {
+    const result = await pool.query('SELECT * FROM reviews ORDER BY created_at DESC');
+    return NextResponse.json({ success: true, reviews: result.rows });
+  } catch (error) {
+    console.error('Get all reviews error:', error);
+    return NextResponse.json({ success: false, error: 'שגיאה בטעינת הביקורות' }, { status: 500 });
+  }
+}
+
 export async function POST(request: NextRequest) {
   // Verify admin authentication
   const admin = verifyAdminToken(request);

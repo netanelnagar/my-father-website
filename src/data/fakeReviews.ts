@@ -7,7 +7,8 @@ export const fakeReviews: Review[] = [
     content: "שירות מהיר ומקצועי! המנוף עבד חלק וללא תקלות, מומלץ מאוד.",
     image_filename: "review1.jpg",
     created_at: "2025-09-12T10:20:00Z",
-    name: "יוסי כהן"
+    name: "יוסי כהן",
+    status: "approved",
   },
   {
     id: "2",
@@ -15,21 +16,24 @@ export const fakeReviews: Review[] = [
     content: "איכות טובה, התקנה מקצועית. רק העיכוב בלוח הזמנים הוריד קצת את הציון.",
     image_filename: "review2.jpg",
     created_at: "2025-08-03T14:05:00Z",
-    name: "אורן ישראלי"
+    name: "אורן ישראלי",
+    status: "approved",
   },
   {
     id: "3",
     rating: 5,
     content: "מענה אדיב ותמיכה טכנית מעולה. מוצר אמין וחזק.",
     created_at: "2025-07-21T09:30:00Z",
-    name: "דנה לוי"
+    name: "דנה לוי",
+    status: "approved",
   },
   {
     id: "4",
     rating: 3,
     content: "המנוף עושה את העבודה, אבל הייתי מצפה לחומרה איכותית יותר במחיר הזה.",
     created_at: "2025-06-05T12:00:00Z",
-    name: "מיכאל לוי"
+    name: "מיכאל לוי",
+    status: "approved",
   },
   {
     id: "5",
@@ -37,14 +41,16 @@ export const fakeReviews: Review[] = [
     content: "חוויית לקוח מצוינת — התקנה מהירה ושירות לאחר מכירה זמין.",
     image_filename: "review3.jpg",
     created_at: "2025-05-18T16:45:00Z",
-    name: "ישראל לוי"
+    name: "ישראל לוי",
+    status: "approved",
   },
   {
     id: "6",
     name: "ישראל לוי",
     rating: 2,
     content: "נדרש שיפור בתיעוד ובהסברים. המכשיר עובד אך התקנה לא ברורה דיו.",
-    created_at: "2025-04-10T08:15:00Z"
+    created_at: "2025-04-10T08:15:00Z",
+    status: "approved",
   },
   {
     id: "7",
@@ -52,28 +58,32 @@ export const fakeReviews: Review[] = [
     content: "עמידות טובה לאורך זמן. השירות יכול להיות מעט מהיר יותר בהתחשב בצורך שלנו.",
     image_filename: "review4.jpg",
     created_at: "2025-03-02T11:10:00Z",
-    name: "יוסי כהן"
+    name: "יוסי כהן",
+    status: "approved",
   },
   {
-    id: "5",
+    id: "8",
     rating: 5,
     content: "מקצוענים אמיתיים. פתרו לנו בעיה מורכבת במהירות וביעילות.",
     created_at: "2025-02-27T13:50:00Z",
-    name: "ישראל לוי"
+    name: "ישראל לוי",
+    status: "approved",
   },
   {
-    id: "6",
+    id: "9",
     rating: 4,
     content: "מוצר יציב ואמין, מחיר הוגן. מומלץ בעין הרים ובעבודה תעשייתית.",
     image_filename: "review5.jpg",
     created_at: "2025-01-15T07:40:00Z",
-    name: "ישראל לוי"
+    name: "ישראל לוי",
+    status: "approved",
   },
   {
-    id: "7",
+    id: "10",
     rating: 1,
     content: "חוויה מאכזבת — הגיע פגום והיה איטי בתיקון. לא אחזור שוב.",
     created_at: "2024-12-04T19:25:00Z",
-    name: "ישראל לוי"
+    name: "ישראל לוי",
+    status: "approved",
   }
 ];

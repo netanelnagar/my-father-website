@@ -11,6 +11,7 @@ const tabs: { key: AdminTabKey; label: string }[] = [
   { key: 'reviews', label: 'ביקורות' },
   { key: 'upload-review', label: 'העלאת ביקורת' },
   { key: 'gallery', label: 'גלריית תמונות' },
+  { key: 'pending-gallery', label: 'תמונות ממתינות' },
 ];
 
 export function TabsNav({ activeTab, onChange }: Props) {

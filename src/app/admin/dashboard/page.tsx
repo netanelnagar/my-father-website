@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { TabsNav } from '@/components/TabsNav';
 import { ReviewsTable } from '@/components/ReviewsTable';
 import { ProjectImages } from '@/components/ProjectImages';
+import { PendingGalleryTable } from '@/components/PendingGalleryTable';
 import { AdminTabKey } from '@/types';
 import UploadReview from '@/components/UploadReview';
 
@@ -69,6 +70,10 @@ export default function AdminDashboard() {
 
           <div className={activeTab === 'upload-review' ? 'block' : 'hidden'}>
             <UploadReview setFlagForAddedOrDeletedReview={setFlagForAddedOrDeletedReview} />
+          </div>
+
+          <div className={activeTab === 'pending-gallery' ? 'block' : 'hidden'}>
+            <PendingGalleryTable />
           </div>
         </div>
       </div>
